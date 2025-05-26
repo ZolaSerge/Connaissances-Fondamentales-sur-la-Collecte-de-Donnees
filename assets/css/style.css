@@ -1,0 +1,49 @@
+/* Styles pour l'en-tête global du site */
+.site-header {
+    /* Padding pour l'espace intérieur de l'en-tête */
+    padding: 30px 40px 20px 40px;
+    /* Couleur de fond */
+    background-color: #ffffff; /* Blanc pur */
+    /* Ligne de séparation en bas de l'en-tête */
+    border-bottom: 1px solid #eee;
+    /* Alignement du texte à gauche */
+    text-align: left;
+}
+
+/* Conteneur du logo */
+.header-logo {
+    /* Marge sous le logo pour l l'espacer du titre */
+    margin-bottom: 15px;
+}
+
+/* Image du logo */
+.header-logo img {
+    /* Ajustez la hauteur du logo selon vos préférences */
+    height: 60px;
+    width: auto; /* Maintient les proportions */
+}
+
+/* Titre principal du cours dans l'en-tête (ex: "Foundational Malaria Knowledge") */
+.course-main-title {
+    /* La couleur dans l'image est un gris foncé, pas rouge pour ce titre */
+    color: #333;
+    font-size: 2.4em; /* Taille de la police, ajustez selon l'image */
+    margin: 0; /* Supprime les marges par défaut */
+    line-height: 1.2;
+}
+
+/* Sous-titre du cours dans l'en-tête (ex: "MACEPA Data Fellowship...") */
+.course-sub-title {
+    color: #666; /* Un gris plus clair */
+    font-size: 1.1em;
+    margin: 5px 0 0 0; /* Petite marge au-dessus */
+}
+
+/* Styles pour les TITRES DE CHAPITRE (comme "Introduction" dans la page de contenu) */
+/* Supposons que vos titres de chapitre principaux sont des H1 ou H2 dans le `.main-content` */
+.main-content h1, .main-content h2 {
+    color: #d9534f; /* Ceci est une nuance de ROUGE, similaire à celle de l'image */
+    font-size: 2em; /* Ajustez la taille */
+    margin-top: 40px; /* Espace au-dessus du titre du chapitre */
+    margin-bottom: 20px; /* Espace en dessous */
+}
