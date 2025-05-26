@@ -47,3 +47,39 @@
     margin-top: 40px; /* Espace au-dessus du titre du chapitre */
     margin-bottom: 20px; /* Espace en dessous */
 }
+/* Styles pour les sous-titres de chapitre (H3) */
+.main-content h3 {
+    color: #555; /* Gris foncé pour les sous-titres H3 */
+    font-size: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+/* Styles de base pour les paragraphes et les listes */
+.main-content p {
+    margin-bottom: 1em;
+}
+
+.main-content ul, .main-content ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+/* Nouveaux styles pour le header spécifique de l'index */
+.site-header-index {
+    padding: 40px 40px 30px 40px; /* Peut-être un padding différent */
+    background-color: #e6f0ff; /* Une couleur de fond différente pour le header de l'index */
+    border-bottom: 2px solid #007bff; /* Une bordure plus prononcée */
+    text-align: center; /* Centrer le texte */
+}
+
+.course-main-title-index {
+    color: #0056b3; /* Une couleur de texte différente */
+    font-size: 2.8em; /* Une taille de police plus grande */
+    margin-bottom: 10px;
+}
+
+.course-sub-title-index {
+    color: #333;
+    font-size: 1.3em;
+}
+
+/* Vous pouvez réutiliser les styles existants pour .header-logo si vous voulez qu'il reste pareil */
