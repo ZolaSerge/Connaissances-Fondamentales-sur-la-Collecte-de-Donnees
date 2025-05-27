@@ -1,8 +1,15 @@
 ---
-layout: index_layout # C'est le layout spécifique à l'index que nous avons créé
-title: "Page d'Accueil de la Formation" # Le titre de la page affiché dans l'onglet du navigateur
+layout: chapitre # index.md utilise maintenant le même layout que les chapitres
+title: "Connaissances Fondamentales sur la Collecte de Données" # Le titre de la page affiché dans l'onglet du navigateur
 ---
 
+<div class="main-content-header">
+    <div class="header-logo-in-content">
+        <img src="{{ site.baseurl }}/assets/images/path_logo.png" alt="PATH Logo">
+    </div>
+    <h1 class="course-main-title-in-content">Connaissances Fondamentales sur la Collecte de Données</h1>
+    <p class="course-sub-title-in-content">MACEPA Data Fellowship - Training Materials</p>
+</div>
 <a id="introduction-module"></a>
 # Introduction
 
@@ -28,4 +35,4 @@ Ce cours est conçu pour vous offrir une compréhension approfondie de la collec
 
 ---
 
-[**Démarrer la formation : Chapitre 1 - Introduction à la Collecte de Données**](chapitres/chapitre-1-collecte-donnees.html)
+[**Démarrer la formation : Chapitre 1 - Introduction à la Collecte de Données**](chapitres/chapitre-1-collecte-donnees.md)
