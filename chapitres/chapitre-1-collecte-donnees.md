@@ -1,5 +1,5 @@
 ---
-layout: chapitre # Ceci dit à Jekyll d'utiliser le layout chapitre.html
+layout: default # Ceci dit à Jekyll d'utiliser le layout chapitre.html
 title: "Chapitre 1 : Introduction à la Collecte de Données et son Importance"
 ---
 

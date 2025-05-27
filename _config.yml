@@ -1,0 +1,23 @@
+# _config.yml
+title: Formation Collecte de Données # Exemple: "Formation Collecte de Données"
+email: serge.zola@gmail.com
+description: >- # This "description" will go into <meta> tag in HTML
+  Description de votre formation.
+baseurl: "/Connaissances-Fondamentales-sur-la-Collecte-de-Donnees" # Exemple: "/votre-depot-github" - Laissez vide si votre site est à la racine de votre domaine (ex: votresite.com)
+url: "https://zolaserge.github.io/" # Exemple: "https://votre-utilisateur.github.io" ou "https://votredomaine.com"
+timezone: Europe/Paris # Adaptez à votre fuseau horaire
+
+# Build settings
+markdown: kramdown
+theme: minima # Ou un autre thème si vous en utilisez un
+plugins:
+  - jekyll-feed
+# Exclure des fichiers ou dossiers du build
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
