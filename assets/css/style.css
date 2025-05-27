@@ -7,45 +7,18 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5; /* Couleur de fond légère */
+    background-color: #f5f5f5; /* Couleur de fond légère pour le fond du body */
 }
 
 /* ---------------------------------------------------- */
-/* Styles pour le HEADER GLOBAL DU SITE (.site-header) */
-.site-header {
-    padding: 30px 40px 20px 40px; /* Espace intérieur */
-    background-color: #ffffff; /* Fond blanc */
-    border-bottom: 1px solid #eee; /* Ligne de séparation fine */
-    text-align: left; /* Alignement du texte à gauche */
-}
-.header-logo {
-    margin-bottom: 15px; /* Marge sous le logo */
-}
-.header-logo img {
-    height: 60px; /* Taille du logo */
-    width: auto;
-}
-.course-main-title {
-    color: #333; /* Gris foncé pour le titre principal */
-    font-size: 2.4em;
-    margin: 0;
-    line-height: 1.2;
-}
-.course-sub-title {
-    color: #666; /* Gris plus clair pour le sous-titre */
-    font-size: 1.1em;
-    margin: 5px 0 0 0;
-}
-/* ---------------------------------------------------- */
-
-
-/* Conteneur principal pour les 3 colonnes (left-sidebar, main-content, right-sidebar) */
-.content-wrapper {
+/* NOUVEAU : Conteneur pour les 3 colonnes (left-sidebar, main-content, right-sidebar) */
+.content-container {
     display: flex; /* Active Flexbox pour la disposition en ligne */
     max-width: 1400px; /* Largeur maximale de votre site */
     margin: 0 auto; /* Centre le conteneur sur la page */
-    min-height: calc(100vh - 120px); /* Ajustez '120px' si la hauteur de votre .site-header change */
-    background-color: #ffffff; /* Fond blanc pour le contenu central */
+    min-height: 100vh; /* S'assure que le conteneur prend au moins toute la hauteur de la vue */
+    background-color: #ffffff; /* Fond blanc pour la zone des 3 colonnes */
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Légère ombre pour délimiter si nécessaire */
 }
 
 /* Barre latérale gauche (navigation globale) */
@@ -65,8 +38,43 @@ body {
     flex: 1; /* Prend l'espace restant disponible */
     padding: 40px; /* Espacement intérieur du contenu */
     max-width: 850px; /* Limite la largeur du texte pour la lisibilité */
-    margin: 0 auto; /* ESPACES : Centre le contenu dans l'espace Flexbox disponible (attribue les espaces restants) */
+    margin: 0 auto; /* ESPACES : Centre le contenu dans l'espace Flexbox disponible */
+    overflow-y: auto; /* Permet au contenu de cette colonne de défiler */
+    /* Pas de 'sticky' ou 'fixed' car il doit défiler avec le contenu */
 }
+
+/* NOUVEAU : Styles pour le "header" qui est dans le contenu principal */
+.content-header {
+    margin-bottom: 40px; /* Espace sous ce bloc avant le contenu du chapitre */
+    padding-bottom: 20px; /* Espace interne sous la ligne de séparation */
+    border-bottom: 1px solid #eee; /* Ligne de séparation */
+    text-align: left; /* Alignement du texte à gauche */
+}
+.content-header .header-logo {
+    margin-bottom: 15px; /* Marge sous le logo */
+}
+.content-header .header-logo img {
+    height: 60px; /* Taille du logo */
+    width: auto;
+}
+.content-header .course-main-title {
+    color: #333; /* Gris foncé pour le titre principal */
+    font-size: 2.4em;
+    margin: 0;
+    line-height: 1.2;
+}
+.content-header .course-sub-title {
+    color: #666; /* Gris plus clair pour le sous-titre */
+    font-size: 1.1em;
+    margin: 5px 0 0 0;
+}
+.content-header .header-separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+/* ---------------------------------------------------- */
+
 
 /* Barre latérale droite (Table des Matières de la page courante) */
 .right-sidebar {
@@ -103,6 +111,7 @@ body {
     color: #555;
     text-transform: uppercase;
     font-size: 0.85em;
+    padding-top: 15px; /* Espacement au-dessus des titres de groupe */
 }
 .nav-list li a {
     display: block; /* Chaque lien prend toute la largeur */
@@ -160,10 +169,11 @@ body {
 
 /* Médias Queries pour la réactivité sur mobile/tablette */
 @media (max-width: 1024px) {
-    .content-wrapper {
+    .content-container {
         flex-direction: column;
         max-width: 100%;
-        padding: 0;
+        min-height: auto; /* Sur mobile, la hauteur peut s'adapter */
+        box-shadow: none;
     }
     .left-sidebar, .right-sidebar {
         width: 100%;
@@ -180,8 +190,16 @@ body {
     .main-content {
         padding: 20px;
         max-width: 100%;
+        overflow-y: visible; /* Pas de défilement interne sur mobile pour le contenu principal */
     }
-    .site-header { /* Le header global est affecté ici */
-        padding: 20px;
+    .content-header {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+    .content-header .course-main-title {
+        font-size: 1.8em;
+    }
+    .content-header .course-sub-title {
+        font-size: 1em;
     }
 }

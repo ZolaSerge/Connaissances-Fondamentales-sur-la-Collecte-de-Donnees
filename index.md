@@ -3,6 +3,8 @@ layout: default # Utilisez le layout par défaut pour toutes les pages
 title: "Connaissances Fondamentales sur la Collecte de Données" # Le titre de la page affiché dans l'onglet du navigateur
 ---
 
+{% include main_content_header.html %}
+
 <a id="introduction"></a>
 # Introduction
 
