@@ -18,21 +18,13 @@ Ce cours est conçu pour vous offrir une compréhension approfondie de la collec
 
 ---
 
-<a id="schedule"></a>
-# Schedule
-
-As a reminder, this module is self-directed learning through a set of chapters in this book.
-
----
-
 <a id="module-objectives"></a>
-# Module Objectives
+# Objectifs du module
 
-* Understand the basic biology of malaria and the malaria parasite.
-* Learn about the epidemiology and global impact of malaria.
-* Gain insights into malaria transmission, life cycle, and vectors.
-* Explore malaria diagnosis, treatment, and prevention strategies.
-* Recognize the importance of surveillance, data collection, and analysis in malaria control efforts.
+* Comprendre l'importance de la collecte de données.
+* Maîtriser les différentes méthodes de collecte de données.
+* Concevoir et développer des formulaires de collecte de données.
+* Valider les données collectées.
 
 ---
 

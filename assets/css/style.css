@@ -1,34 +1,39 @@
-/* Styles pour l'en-tête global du site */
+/* assets/css/style.css */
+
+/* Styles de base pour le corps de la page */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5; /* Couleur de fond légère */
+}
+
+/* Styles pour l'en-tête global du site (utilisé pour les chapitres via header.html) */
 .site-header {
-    /* Padding pour l'espace intérieur de l'en-tête */
     padding: 30px 40px 20px 40px;
-    /* Couleur de fond */
     background-color: #ffffff; /* Blanc pur */
-    /* Ligne de séparation en bas de l'en-tête */
-    border-bottom: 1px solid #eee;
-    /* Alignement du texte à gauche */
-    text-align: left;
+    border-bottom: 1px solid #eee; /* Ligne de séparation en bas de l'en-tête */
+    text-align: left; /* Alignement du texte à gauche */
 }
 
 /* Conteneur du logo */
 .header-logo {
-    /* Marge sous le logo pour l l'espacer du titre */
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Marge sous le logo pour l'espacer du titre */
 }
 
 /* Image du logo */
 .header-logo img {
-    /* Ajustez la hauteur du logo selon vos préférences */
-    height: 60px;
+    height: 60px; /* Ajustez la hauteur du logo selon vos préférences */
     width: auto; /* Maintient les proportions */
 }
 
 /* Titre principal du cours dans l'en-tête (ex: "Foundational Malaria Knowledge") */
 .course-main-title {
-    /* La couleur dans l'image est un gris foncé, pas rouge pour ce titre */
-    color: #333;
-    font-size: 2.4em; /* Taille de la police, ajustez selon l'image */
-    margin: 0; /* Supprime les marges par défaut */
+    color: #333; /* Gris foncé */
+    font-size: 2.4em;
+    margin: 0;
     line-height: 1.2;
 }
 
@@ -36,17 +41,123 @@
 .course-sub-title {
     color: #666; /* Un gris plus clair */
     font-size: 1.1em;
-    margin: 5px 0 0 0; /* Petite marge au-dessus */
+    margin: 5px 0 0 0;
 }
 
-/* Styles pour les TITRES DE CHAPITRE (comme "Introduction" dans la page de contenu) */
-/* Supposons que vos titres de chapitre principaux sont des H1 ou H2 dans le `.main-content` */
-.main-content h1, .main-content h2 {
-    color: #d9534f; /* Ceci est une nuance de ROUGE, similaire à celle de l'image */
-    font-size: 2em; /* Ajustez la taille */
-    margin-top: 40px; /* Espace au-dessus du titre du chapitre */
-    margin-bottom: 20px; /* Espace en dessous */
+/* --- DÉBUT DES NOUVEAUX STYLES POUR LE HEADER SPÉCIFIQUE DE L'INDEX (header_index.html) --- */
+.site-header-index {
+    padding: 30px 40px 20px 40px; /* Padding similaire ou ajusté */
+    background-color: #ffffff; /* **CORRIGÉ : Fond blanc comme demandé** */
+    border-bottom: none; /* **CORRIGÉ : Pas de bordure comme demandé** */
+    text-align: left; /* **CORRIGÉ : Alignement à gauche comme demandé** */
 }
+
+.course-main-title-index {
+    color: #333; /* Couleur gris foncé pour le titre de l'index, comme l'image */
+    font-size: 2.4em; /* Taille de police similaire à l'autre titre principal */
+    margin: 0;
+    line-height: 1.2;
+}
+
+.course-sub-title-index {
+    color: #666; /* Couleur gris clair pour le sous-titre de l'index */
+    font-size: 1.1em;
+    margin: 5px 0 0 0;
+}
+/* --- FIN DES NOUVEAUX STYLES POUR LE HEADER SPÉCIFIQUE DE L'INDEX --- */
+
+
+/* Conteneur principal pour les 3 colonnes (left-sidebar, main-content, right-sidebar) */
+.content-wrapper {
+    display: flex; /* Active Flexbox pour la disposition en ligne */
+    max-width: 1400px; /* Largeur maximale de votre site */
+    margin: 0 auto; /* Centre le conteneur */
+    min-height: calc(100vh - 150px); /* Assure que le contenu prend de la hauteur (ajustez 150px si votre header est plus grand/petit) */
+    background-color: #ffffff; /* Fond blanc pour le contenu central */
+}
+
+/* Barre latérale gauche (navigation globale) */
+.left-sidebar {
+    width: 280px; /* Largeur fixe */
+    padding: 30px 20px;
+    border-right: 1px solid #eee; /* Ligne de séparation */
+    background-color: #fcfcfc; /* Fond légèrement grisé */
+    position: sticky; /* Rendre la barre collante au défilement */
+    top: 0; /* Coller en haut de la fenêtre */
+    height: 100vh; /* Prend toute la hauteur visible */
+    overflow-y: auto; /* Active le défilement si le contenu dépasse */
+}
+
+/* Contenu principal du chapitre */
+.main-content {
+    flex: 1; /* Prend l'espace restant disponible */
+    padding: 40px;
+    max-width: 850px; /* Limite la largeur du texte pour la lisibilité */
+    margin: 0 auto; /* Centre le contenu dans son espace */
+}
+
+/* Barre latérale droite (Table des Matières de la page courante) */
+.right-sidebar {
+    width: 250px; /* Largeur fixe */
+    padding: 30px 20px;
+    border-left: 1px solid #eee; /* Ligne de séparation optionnelle */
+    background-color: #fcfcfc; /* Fond légèrement grisé */
+    position: sticky; /* Rendre la barre collante au défilement */
+    top: 0; /* Coller en haut de la fenêtre */
+    height: 100vh; /* Prend toute la hauteur visible */
+    overflow-y: auto; /* Active le défilement si le contenu dépasse */
+    font-size: 0.9em;
+}
+
+/* Styles pour la barre de recherche dans la navigation gauche */
+.search-container {
+    margin-bottom: 20px;
+}
+#search-input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styles pour les listes de navigation et de la TDM */
+.nav-list, .right-sidebar ul {
+    list-style: none; /* Supprime les puces par défaut */
+    padding: 0;
+}
+.nav-list .nav-group-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+.nav-list li a, .right-sidebar ul li a {
+    display: block; /* Chaque lien prend toute la largeur */
+    padding: 8px 0;
+    text-decoration: none; /* Supprime le soulignement */
+    color: #444; /* Couleur par défaut des liens */
+}
+.nav-list li a:hover, .right-sidebar ul li a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+/* Styles spécifiques pour les TITRES DE CHAPITRE et sections principales (H1) */
+.main-content h1 {
+    color: #d9534f; /* Rouge, comme le "Introduction" dans l'image de chapitre */
+    font-size: 2em; /* Taille du titre */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+/* Ajoutez les styles pour les H2 du contenu si vous voulez qu'ils soient aussi rouges, sinon ils seront noirs par défaut */
+.main-content h2 {
+    color: #d9534f; /* Rouge */
+    font-size: 1.8em; /* Légèrement plus petit qu'un H1 */
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+
 /* Styles pour les sous-titres de chapitre (H3) */
 .main-content h3 {
     color: #555; /* Gris foncé pour les sous-titres H3 */
@@ -54,32 +165,40 @@
     margin-top: 30px;
     margin-bottom: 15px;
 }
+
 /* Styles de base pour les paragraphes et les listes */
 .main-content p {
     margin-bottom: 1em;
 }
-
 .main-content ul, .main-content ol {
     margin-left: 20px;
     margin-bottom: 1em;
 }
-/* Nouveaux styles pour le header spécifique de l'index */
-.site-header-index {
-    padding: 40px 40px 30px 40px; /* Peut-être un padding différent */
-    background-color: #e6f0ff; /* Une couleur de fond différente pour le header de l'index */
-    border-bottom: 2px solid #007bff; /* Une bordure plus prononcée */
-    text-align: center; /* Centrer le texte */
-}
 
-.course-main-title-index {
-    color: #0056b3; /* Une couleur de texte différente */
-    font-size: 2.8em; /* Une taille de police plus grande */
-    margin-bottom: 10px;
+/* Médias Queries pour la réactivité sur mobile/tablette */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        flex-direction: column; /* Les colonnes s'empilent sur les petits écrans */
+        max-width: 100%; /* Prend toute la largeur */
+        padding: 0;
+    }
+    .left-sidebar, .right-sidebar {
+        width: 100%; /* Les barres latérales prennent toute la largeur */
+        position: relative; /* Ne sont plus fixes */
+        height: auto; /* Hauteur s'adapte au contenu */
+        border: none; /* Supprime les bordures verticales */
+        padding: 20px; /* Ajustez le padding */
+    }
+    .right-sidebar {
+        order: -1; /* Place la TDM au-dessus du contenu principal sur mobile */
+        padding-bottom: 0;
+        border-bottom: 1px solid #eee; /* Ligne de séparation sous la TDM */
+    }
+    .main-content {
+        padding: 20px; /* Réduire le padding pour les petits écrans */
+        max-width: 100%; /* Prend toute la largeur disponible */
+    }
+    .site-header-index, .site-header { /* Appliquer aux deux types de headers */
+        padding: 20px; /* Réduire le padding de l'en-tête */
+    }
 }
-
-.course-sub-title-index {
-    color: #333;
-    font-size: 1.3em;
-}
-
-/* Vous pouvez réutiliser les styles existants pour .header-logo si vous voulez qu'il reste pareil */
