@@ -1,5 +1,5 @@
 ---
-layout: default # Ceci dit à Jekyll d'utiliser le layout chapitre.html
+layout: default # Ceci dit à Jekyll d'utiliser le layout default.html
 title: "Chapitre 1 : Introduction à la Collecte de Données et son Importance"
 ---
 
@@ -7,6 +7,17 @@ title: "Chapitre 1 : Introduction à la Collecte de Données et son Importance"
 
 <a id="chapitre-1-titre"></a>
 # Chapitre 1 : Introduction à la Collecte de Données et son Importance
+
+Les bonnes décisions sont seules qui ne sont pas basées sur des hypothèses ou des impressions instinctives.  L'objectif principal de la collecte de données est de garantir que les informations recueillies sont fiables et qu'elles contiennent des données pertinentes pouvant être analysées et converties en décisions basées sur des données. La collecte de données de haute qualité est essentiel pour confirmer une hypoythèse, évaluer une intervention ou un programme ou encore analyser le comportement des prestataires, etc. Ainsi, pour recueillir des données fiables et informatives, il faut adpoter une bonne approche et utiliser quelques outils pratiques.
+
+Ce chapitre nous donne l'apareçu général de la collecte de données ainsi que les définitions de concepts clés. Les sujets abordés ici seront approfondis au cours de ce module.
+
+<a id="1-0-objectifs-apprentissage"></a>
+## Objectifs d'apprentissage
+
+* Connaitre la collecte de données
+* Connaitre l'importance de la collecte données
+* identifier et définir les données à collecter
 
 <a id="1-1-definition"></a>
 ## 1.1 Qu'est-ce que la collecte de données ?

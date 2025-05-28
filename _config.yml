@@ -5,13 +5,14 @@ description: >- # This "description" will go into <meta> tag in HTML
   Description de votre formation.
 baseurl: "/Connaissances-Fondamentales-sur-la-Collecte-de-Donnees" # Exemple: "/votre-depot-github" - Laissez vide si votre site est à la racine de votre domaine (ex: votresite.com)
 url: "https://zolaserge.github.io/" # Exemple: "https://votre-utilisateur.github.io" ou "https://votredomaine.com"
-timezone: Europe/Paris # Adaptez à votre fuseau horaire
+timezone: Africa/Kinshasa # <--- AJOUTEZ OU MODIFIEZ CETTE LIGNE
 
 # Build settings
 markdown: kramdown
 theme: minima # Ou un autre thème si vous en utilisez un
 plugins:
   - jekyll-feed
+  - jekyll-toc # Assurez-vous que jekyll-toc est bien listé ici
 # Exclure des fichiers ou dossiers du build
 exclude:
   - .sass-cache/
