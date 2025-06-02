@@ -1,19 +1,32 @@
 # _config.yml
-title: Formation Collecte de Données # Exemple: "Formation Collecte de Données"
-email: serge.zola@gmail.com
-description: >- # This "description" will go into <meta> tag in HTML
-  Description de votre formation.
-baseurl: "/Connaissances-Fondamentales-sur-la-Collecte-de-Donnees" # Exemple: "/votre-depot-github" - Laissez vide si votre site est à la racine de votre domaine (ex: votresite.com)
-url: "https://zolaserge.github.io/" # Exemple: "https://votre-utilisateur.github.io" ou "https://votredomaine.com"
-timezone: Africa/Kinshasa # <--- AJOUTEZ OU MODIFIEZ CETTE LIGNE
+
+# Site settings
+title: "Connaissances Fondamentales sur la Collecte de Données" # Le titre de votre site
+email: votre-email@example.com # Optionnel
+description: "Formation sur les connaissances fondamentales de la collecte de données pour le PNLP." # Description de votre site
+
+# Base URL et URL du site (TRÈS IMPORTANT pour GitHub Pages)
+baseurl: "/Connaissances-Fondamentales-sur-la-Collecte-de-Donnees" # Le chemin de votre dépôt GitHub (commence par un / et ne finit pas par un /)
+url: "https://zolaserge.github.io" # L'URL de base de votre site GitHub Pages (sans le chemin du dépôt)
+
+# Permalinks (commenter si vous voulez les permaliens par défaut de Jekyll)
+# permalink: /:title/
 
 # Build settings
 markdown: kramdown
-theme: minima # Ou un autre thème si vous en utilisez un
+kramdown:
+  input: GFM # Utilise GitHub Flavored Markdown
+  syntax_highlighter: rouge # Pour la coloration syntaxique du code
+  hard_wrap: false # Ne pas envelopper le texte automatiquement
+theme: minima # Si vous utilisez le thème par défaut de Jekyll
+
+# Plugins (maintenant que nous utilisons GitHub Actions, nous listons les plugins nécessaires)
 plugins:
   - jekyll-feed
-  - jekyll-toc # Assurez-vous que jekyll-toc est bien listé ici
-# Exclure des fichiers ou dossiers du build
+  # - jekyll-toc # Cette ligne doit être commentée ou supprimée
+
+# Exclude from processing.
+# Les fichiers et dossiers listés ici ne seront pas traités par Jekyll.
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -21,4 +34,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  # Excluez également le nouveau dossier GitHub Actions pour éviter qu'il soit copié sur le site
+  - .github/ # Exclure le dossier des workflows GitHub Actions
