@@ -1,0 +1,49 @@
+# .github/workflows/jekyll-build.yml
+
+name: Deploy Jekyll site to Pages
+
+on:
+  push:
+    branches: ["main"] # Ou le nom de votre branche principale si ce n'est pas 'main'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3' # Assurez-vous que cette version de Ruby correspond à celle que vous utilisez localement ou une version compatible. Ruby 3.3 est la plus récente au moment où j'écris ces lignes.
+          bundler-cache: true # Installe les dépendances du Gemfile.lock
+          cache-version: 0 # Incrémente ceci pour forcer la recréation du cache bundler si vous modifiez le Gemfile
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --baseurl ${{ github.event.repository.name }}
+        # Ou si votre baseurl est statique dans _config.yml, utilisez :
+        # run: bundle exec jekyll build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
