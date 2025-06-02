@@ -40,7 +40,7 @@ La gestion du cycle de vie des données correspond aux pratiques de gestion de d
 
 source : [Cycle de vie des données : Définition et étapes](https://www.talend.com/fr/resources/cycle-vie-donnees/)
 
-</a id="1-3-1-collecte"></a>
+<a id="1-3-1-collecte"></a>
 ## Collecte
 
 * Collecte : Rassembler les informations.
